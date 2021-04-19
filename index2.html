@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#all{
+				width: 300px;
+				height:200px;
+				margin: auto;
+				position: absolute;
+				top: 0px;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background:url(../img/10.jpg) no-repeat;
+			}
+			#log{
+				width: 300px;
+				height:50px;
+				position: absolute;
+				border: 1px #F08080;
+				top:0px;
+				left: 0;
+				color: #F08080;
+				font-size:12px;
+				text-align: center;
+			}
+			#mag{
+				width: 100px;
+				height:50px;
+				position: absolute;
+				top:35px;
+				right:40px;
+				color: #F08080;
+				font-size:8px;
+			}
+			#aa{
+				width: 100px;
+				height:20px;
+				position: absolute;
+				top:0px;
+				left: 0px;
+				color: #F08080;
+				font-size:8px;
+			}
+			#bb{
+				width: 100px;
+				height:20px;
+				position: absolute;
+				top:10px;
+				left: 0px;
+				color: #F08080;
+				font-size:8px;
+				border:1px  cadetblue;
+			}
+			#main{
+				width: 300px;
+				height:100px;
+				margin: auto;
+				position: absolute;
+				top:40px ;
+				left: 0px;
+				color: #E9967A;
+				font-size: 10px ;
+			}
+
+			#cc{
+				width: 200px;
+				height:100px;
+				margin: auto;
+				position: absolute;
+				top:60px ;
+				left: 0px;
+				color: #E9967A;
+				font-size: 10px ;
+			}
+			#aq{
+				width: 60px;
+				height:60px;
+				margin: auto;
+				position: absolute;
+				top:40px ;
+				left: 110px;
+				border-radius: 50%;
+				border: 1px solid  #E9967A;
+				color: #E9967A;
+				font-size: 10px ;
+				line-height: 60px;
+				text-align:center;
+
+			}
+			#dd{
+				width:300px;
+				height:50px;
+				margin: auto;
+				position: absolute;
+				top:170px ;
+				left: 0px;
+				color: #E9967A;
+				font-size: 8px ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="log">
+               欢迎登陆数字猜猜乐游戏
+			</div>
+			<div id="mag">
+				<div id="aa">
+					消息：猜数字,数字从0-100
+				</div>
+				<div id="bb">
+
+
+			
+				</div>
+		    </div>
+			<div id="main">
+				<div id="cc"> Higher or Lower:</div>
+				<div id="aq"> </div>
+			</div>
+			<div id="dd">
+				Num Guessed：<input  id="dd1" type="text" name="text" />
+				<input type="submit" onclick="isNum()" value="提交"/>
+			</div>
+		</div>
+		<script>
+			var count=0;
+			var rnd = parseInt(Math.random()*101);
+			console.log(rnd);
+			function isNum(){
+				var num1=Number(document.getElementById("dd1").value);
+				if(rnd==num1){
+					aq.innerHTML='相等';
+				}else if(rnd>num1){
+					aq.innerHTML='小了';
+				}else {
+					aq.innerHTML='大了';
+				}
+				count++;
+				bb.innerHTML=count;
+			}
+
+		</script>
+		</body>
+</html>
